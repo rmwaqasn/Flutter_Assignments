@@ -1,0 +1,31 @@
+void main() {
+  
+  Animal animal = Animal('Goat',5);
+  animal.makeSound();
+
+  Dog dog = Dog('dogi',12,'german shefaerd');
+  dog.makeSound();
+
+}
+
+class Animal {
+  String _animalName;
+  int animalAge;
+
+  Animal(this._animalName,this.animalAge);
+
+  void makeSound() {
+    print('Animal is Making the sound');
+  }
+}
+
+class Dog extends Animal {
+  String dogBreed;
+
+  Dog(String _animalName,int animalAge,this.dogBreed) : super(_animalName,animalAge);
+
+  @override
+  void makeSound() {
+    print('Woof');
+  }
+}

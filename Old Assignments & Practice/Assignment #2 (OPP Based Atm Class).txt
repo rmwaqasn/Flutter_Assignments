@@ -1,0 +1,38 @@
+void main() {
+  List<Atm> atms = [Atm('bahadurabad'), Atm('Tariq road')];
+
+  print(atms[0]._location);
+  atms[0]._withdraw();
+  atms[1]._deposit();
+}
+
+// Abstract Class.
+abstract class AtmMechanism {
+  String? _location;
+
+  AtmMechanism(this._location);
+
+  // Abstract Method.
+  void _withdraw();
+
+  // Non-Abstract method: It have an implementation
+  void _deposit() {
+    print('Deposited');
+  }
+
+}
+
+class Atm extends AtmMechanism {
+
+  Atm(String _location) : super(_location);
+
+  @override
+  void _withdraw() {
+    print('$_location Atm Withdraw Done');
+  }
+
+  @override
+  void _deposit() {
+    print('$_location Atm Deposit Done');
+  }
+}

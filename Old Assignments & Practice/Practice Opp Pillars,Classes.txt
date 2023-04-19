@@ -1,0 +1,43 @@
+void main() {
+  Worker personNo1 = Worker('Mail',5.6);
+
+  personNo1._canEat();
+  personNo1.canBrith();
+
+}
+
+abstract class Person {
+
+  String _gender;
+  double height;
+
+  Person(this._gender, this.height);
+
+  void canBrith() {
+    print('Person Brithing $_gender');
+  }
+  void _canEat() {
+    print('Person Eating');
+  }
+
+}
+
+class Worker extends Person {
+
+  Worker(String _gender, double height) : super(_gender, height);
+
+  @override
+  void canBrith() {
+    print('Worker brithing');
+  }
+  @override
+  void _canEat() {
+    print('Worker Eating');
+    super._canEat();
+  }
+
+}
+
+// class OfficeStaff implements Person {
+  
+// }

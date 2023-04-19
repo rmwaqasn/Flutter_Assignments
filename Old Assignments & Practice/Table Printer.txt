@@ -1,0 +1,11 @@
+void main() {
+  
+  tablePrinter(2);
+}
+
+void tablePrinter(int whichTable) {
+ 
+  for(int i = 1; i <= 10; i++) {
+    print('$whichTable X $i = ${whichTable * i}');
+  }
+}
