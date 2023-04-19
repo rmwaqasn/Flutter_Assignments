@@ -1,0 +1,39 @@
+void main() {
+
+  Person person1 = Person('Waqas', 18, 'Male');
+  print('Person Details:');
+  person1.printDetails();
+
+  Student student1 = Student('Hussain Ali', 25, 'Male', 'A+');
+  print('Student Deatils:');
+  student1.printDetails();
+
+}
+
+class Person {
+
+  String name;
+  num age;
+  String gender;
+
+  Person(this.name, this.age, this.gender);
+
+  void printDetails() {
+    print('Name = $name, Age = $age, Gender = $gender');
+  }
+
+}
+
+class Student extends Person {
+
+  String gradeLevel;
+
+  Student(String name, num age, String gender, this.gradeLevel) : super(name, age, gender);
+  
+  @override
+  void printDetails() {
+    super.printDetails();
+    print('Grade Level = $gradeLevel');
+  }
+
+}
