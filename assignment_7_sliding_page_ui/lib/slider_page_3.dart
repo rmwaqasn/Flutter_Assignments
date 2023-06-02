@@ -14,7 +14,6 @@ class _Page3State extends State<Page3> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Color(0xff514745),
         body: Padding(
