@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
+import 'first_screen.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const ResponsiveContainerApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class ResponsiveContainerApp extends StatelessWidget {
+  const ResponsiveContainerApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Responsive Containers',
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
       ),
+      home: const FirstScreen(),
     );
   }
 }
