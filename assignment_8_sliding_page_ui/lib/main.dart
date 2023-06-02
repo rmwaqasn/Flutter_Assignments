@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'slider_page_2.dart';
 
@@ -33,7 +35,7 @@ class _Page1State extends State<Page1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff514745),
+      backgroundColor: Color.fromARGB(255, 83, 68, 65),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Center(
@@ -42,7 +44,7 @@ class _Page1State extends State<Page1> {
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(40),
-              color: Color.fromARGB(255, 165, 160, 149),
+              color: Color.fromARGB(255, 161, 187, 223),
             ),
             child: Column(
               children: [

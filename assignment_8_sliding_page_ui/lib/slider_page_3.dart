@@ -1,6 +1,6 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'main.dart';
 
 class Page3 extends StatefulWidget {
@@ -24,7 +24,7 @@ class _Page3State extends State<Page3> {
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(40),
-                color: Color(0xffDBF6E5),
+                color: Color.fromARGB(255, 155, 233, 183),
               ),
               child: Column(
                 children: [
