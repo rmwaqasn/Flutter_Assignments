@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_open_street_map/flutter_open_street_map.dart';
 
@@ -34,11 +32,11 @@ class FirstScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: FlutterOpenStreetMap(
-        center: LatLong(10, 20),
+        center: LatLong(24.85, 67.02),
         onPicked: (pickedData) {
-          log('${pickedData.latLong.latitude}');
-          log('${pickedData.latLong.longitude}');
-          log(pickedData.address);
+          debugPrint('${pickedData.latLong.latitude}');
+          debugPrint('${pickedData.latLong.longitude}');
+          debugPrint(pickedData.address);
         },
       ),
     );
