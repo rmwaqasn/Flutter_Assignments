@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fiters_meal_app_quize/home_screen.dart';
+import 'views/first_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,9 +12,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Quiz Practice App',
-      theme: ThemeData.light(),
-      home: const HomeScreen(),
+      title: 'Fiters Meal App',
+      theme: ThemeData(
+        primarySwatch: Colors.pink,
+      ),
+      home: const FirstPage(),
     );
   }
 }
